@@ -18,13 +18,27 @@
                             "protocol": "Tcp",
                             "sourcePortRange": "*",
                             "destinationPortRange": "*",
-                            "sourceAddressPrefix": "*",
+                            "sourceAddressPrefix": "4.2.2.2/32",
                             "destinationAddressPrefix": "*",
                             "access": "Allow",
                             "priority": 100,
                             "direction": "Inbound"
                         }
-                    }
+                    },
+                    {
+                        "name": "Http",
+                        "properties": {
+                            "description": "Allow remote access via RDP from internet",
+                            "protocol": "Tcp",
+                            "sourcePortRange": "*",
+                            "destinationPortRange": "80",
+                            "sourceAddressPrefix": "*",
+                            "destinationAddressPrefix": "*",
+                            "access": "Allow",
+                            "priority": 101,
+                            "direction": "Inbound"
+                        }
+                    }                    
                 ]
             }
         }
